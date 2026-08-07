@@ -1,18 +1,131 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+.container {
+  max-width: 1128px;
+  margin: 0 auto;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  margin-top: 36px;
+}
+
+.form input {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  width: 272px;
+  height: 40px;
+
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+.form input:hover {
+  border-color: #000000;
+}
+
+.form input:focus {
+  border-color: #4e75ff;
+  outline: none;
+}
+
+.form button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+
+  width: 91px;
+  height: 40px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #4e75ff;
+  color: white;
+
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: #6c8cff;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  justify-content: center;
+}
+
+.gallery-item {
+  width: calc((100% - 48px) / 3);
+
+  border: 1px solid #808080;
+}
+
+.gallery-image {
+  display: block;
+
+  width: 100%;
+  height: 200px;
+
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+
+  padding: 4px 0;
+}
+
+.info p {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+
+  text-align: center;
+  font-size: 12px;
+}
+
+.info b {
+  margin-bottom: 4px;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.hidden {
+  display: none;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #dcdcdc;
+  border-bottom-color: #4e75ff;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
